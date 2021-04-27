@@ -11,4 +11,4 @@ phases:
 
       - sam deploy --template-file packaged.yaml --stack-name iteration3-sam --capabilities CAPABILITY_IAM
 
-#this is a third automatic test
+#this is a 4th automatic test
