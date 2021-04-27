@@ -1,0 +1,10 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+        python: 3.8
+  build:
+    commands:
+      - sam package --template-file template.yaml --s3-bucket sam-code-bucket-3 --output-template-file template-generated.yaml
+
+      - sam deploy --template-file template-generated.yaml --stack-name iteration3-sam --capabilities CAPABILITY_IAM
