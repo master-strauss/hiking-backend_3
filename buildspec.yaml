@@ -5,6 +5,8 @@ phases:
         python: 3.8
   build:
     commands:
-      - sam package --template-file template.yaml --s3-bucket sam-code-bucket-3 --output-template-file template-generated.yaml
+      - aws s3 mb s3://sam-code-artifacts-3
 
-      - sam deploy --template-file template-generated.yaml --stack-name iteration3-sam --capabilities CAPABILITY_IAM
+      - sam package --template-file template.yaml --s3-bucket sam-code-artifacts-3 --output-template-file packaged.yaml
+
+      - sam deploy --template-file packaged.yaml --stack-name iteration3-sam --capabilities CAPABILITY_IAM
