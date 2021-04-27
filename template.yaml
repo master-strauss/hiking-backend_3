@@ -32,7 +32,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: lambda_function3.lambda_handler
-      CodeUri: C:\projects\cloud-architect\iteration3\project\hiking-backend_3\src/
+      CodeUri: C:\projects\cloud-architect\iteration3\project\hiking-backend_3\.src/
       Description: >-
         Iteration 3 - A simple backend (read/write to DynamoDB) with a RESTful API endpoint using Amazon API Gateway.
       Timeout: 3
