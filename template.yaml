@@ -23,7 +23,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       Handler: lambda_function3.lambda_handler
-      CodeUri: .src/
+      CodeUri: src/
 
       Events:
         Root:
