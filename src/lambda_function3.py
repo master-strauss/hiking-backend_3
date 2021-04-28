@@ -1,3 +1,4 @@
+
 import boto3
 import json
 import os
@@ -7,7 +8,6 @@ logger = logging.getLogger()
 logger.setLevel(logging.DEBUG)
 
 print('Loading function')
-
 region_name = os.environ['REGION_NAME']
 dynamo = boto3.client('dynamodb', region_name = region_name)
 table_name = os.environ['TABLE_NAME']
@@ -38,7 +38,6 @@ def lambda_handler(event, context):
     To scan a DynamoDB table, make a GET request with optional query string parameter.
 	To put, update, or delete an item, make a POST, PUT, or DELETE request respectively,
 	passing in the payload to the DynamoDB API as a JSON body.
-    sdsjjasA
     '''
 
     print("Received event: " + json.dumps(event, indent=2))
