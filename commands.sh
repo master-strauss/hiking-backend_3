@@ -8,4 +8,4 @@ aws cloudformation package --s3-bucket sam-code-artifacts-3 --template-file temp
 aws cloudformation deploy --template-file template-generated.yaml --stack-name iteration3-sam --capabilities CAPABILITY_IAM
 
 
-aws cloudformation deploy --guided --template-file template-generated.yaml --stack-name iteration3-sam --capabilities CAPABILITY_IAM
+aws cloudformation deploy --debug --template-file template-generated.yaml --stack-name iteration3-sam --capabilities CAPABILITY_IAM
