@@ -12,7 +12,6 @@ phases:
     commands:
       - echo "Build Phase"
       # aws s3 mb s3://sam-code-bucket-3
-
       #- sam package --template-file template.yaml --s3-bucket sam-code-artifacts-3 --output-template-file packaged.yaml
       - aws cloudformation package --s3-bucket sam-code-bucket-3 --template-file template.yaml --output-template-file template-generated.yaml
       #- sam deploy --template-file packaged.yaml --stack-name iteration3-sam --capabilities CAPABILITY_IAM
