@@ -34,6 +34,9 @@ Resources:
     Properties:
       Handler: lambda_function3.lambda_handler
       CodeUri: src/
+      AutoPublishAlias: live
+        DeploymentPreference:
+          Type: Canary10Percent10Minutes
       Description: >-
         Iteration 3 - A simple backend (read/write to DynamoDB) with a RESTful API endpoint using Amazon API Gateway.
       Policies:
