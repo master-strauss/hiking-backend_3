@@ -7,8 +7,8 @@ Globals:
   #https://github.com/awslabs/serverless-application-model/blob/develop/docs/globals.rst
   Function:
     Runtime: python3.8
-    MemorySize: 256
-    Timeout: 45
+    MemorySize: 128
+    Timeout: 3
     Environment:
       Variables:
         TABLE_NAME: !Ref Table
