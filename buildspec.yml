@@ -18,10 +18,11 @@ phases:
       #- aws cloudformation deploy --guided --template-file template-generated.yaml --stack-name iteration3-sam --capabilities CAPABILITY_IAM
   post_build:
     commands:
+      -
       - echo "Post Build Phase"
       - aws cloudformation deploy --template-file template-generated.yaml --stack-name iteration3-sam --capabilities CAPABILITY_IAM
-artifacts:
-  files:
-    - template-generated.yaml
+#artifacts:
+#  files:
+#    - template-generated.yaml
 
 ###
